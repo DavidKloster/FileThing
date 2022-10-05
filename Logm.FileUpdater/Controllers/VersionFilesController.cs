@@ -22,11 +22,9 @@ namespace Logm.FileUpdater.Controllers
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<VersionFile> Get()
+        public IEnumerable<VersionFile>? Get()
         {
-            _context.Add(new VersionFile{ Name = "nice" });
-            _context.SaveChanges();
-            return _context.VersionFiles.ToList();
+            return _context.VersionFiles?.ToList();
         }
         
         // GET api/values/5
