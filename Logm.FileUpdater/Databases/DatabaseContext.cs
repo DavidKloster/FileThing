@@ -17,7 +17,7 @@ namespace Logm.FileUpdater.Databases
             var path = Environment.GetFolderPath(folder);
             DbPath = System.IO.Path.Join(path, "nicelocaldb.db");
 
-            this.Database.EnsureCreate‚d();
+            this.Database.EnsureCreated();
         }
 
         // The following configures EF to create a Sqlite database file in the
